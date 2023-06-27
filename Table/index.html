@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table using CSS</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="">
+</head>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .content-table{
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        min-width: 400px;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .content-table thead tr {
+        background-color: #24a862;
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+        font-family: calibri ;
+    }
+
+    .content-table th,
+    .content-table td { 
+        padding: 12px 15px;
+        font-family: calibri;
+    }
+
+    .content-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .content-table tbody tr:nth-last-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .content-table tbody tr:last-of-type {
+        border-bottom: 2px solid #43ba84;
+    }
+
+    .content-table tbody tr.active-row {
+        font-weight: bold;
+        color: #009879;
+    }
+    
+</style>
+<body>
+    <h1 align="center" style="color:#28ac63; font-family: Calibri; font-weight: bold; font-size: 50px;"><i>Styling HTML Table with CSS</i></h1>
+    <div class="container">
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Team</th>
+                    <th>Current Point</th>
+                    <th>Prev. Point</th>
+                    <th>Prev. Rank</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Argentina</td>
+                    <td>1,843.73</td>
+                    <td>1,841</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>France</td>
+                    <td>1,843.53</td>
+                    <td>1,838</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Brazil</td>
+                    <td>1,828.27</td>
+                    <td>1,834</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>England</td>
+                    <td>1,797.39</td>
+                    <td>1,792</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Belgium</td>
+                    <td>1,788.55</td>
+                    <td>1,793</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Croatia</td>
+                    <td>1,742.55</td>
+                    <td>1,730</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Netherlands</td>
+                    <td>1,731.23</td>
+                    <td>1,731</td>
+                    <td>6</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

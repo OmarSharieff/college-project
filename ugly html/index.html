@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form in HTML</title>
+  <style>
+    body {
+      background-color: #e9f5db;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2f9252;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #title {
+      color: #fff;
+      font-size: 30px;
+      margin: 0;
+    }
+
+    #description {
+      color: #fff;
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 20px 0;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    input[type="submit"] {
+      background-color: #2f9252;
+      color: #fff;
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      transform: scale(1.1);
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: #000;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: font-size 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">Student Survey</h1>
+    <p id="description"><i>Hi there! Wanna be part of my survey?</i></p>
+  </header>
+
+  <main>
+    <form id="Survey-form">
+      <label for="name" id="name-label"><strong>Name: </strong></label>
+      <input id="name" type="name" required placeholder="Omar">
+      <hr>
+      <label for="email" id="email-label"><strong>Email:</strong> </label>
+      <input id="email" type="email" required placeholder="omar@orange.com">
+      <hr>
+      <label for="number" id="number-label"><strong>Age:</strong> </label>
+      <input id="number" type="number" min="7" max="100" required placeholder="age">
+      <hr>
+      <label for="dropdown" id="dropdown-label"><strong>Currently in: </strong></label>
+      <div class="dropdown">
+        <button>Choose Option</button>
+        <div class="dropdown-content">
+          <a href="#">High School</a>
+          <a href="#">Pre-University</a>
+          <a href="#">Undergraduate</a>
+          <a href="#">Postgraduate</a>
+        </div>
+      </div>
+      <hr>
+      <label for="radio-group" id="radio-group"><strong>Name: </strong></label>
+      <!--Radio Button for General-->
+      <input type="radio" name="radio-group" id="general">
+      <label for="general">General</label>
+      <!--Radio Button for OBC-->
+      <input type="radio" name="radio-group" id="obc">
+      <label for="obc"><abbr title="Other Backward Classes">OBC</abbr></label>
+      <!--Radio Button for EWS-->
+      <input type="radio" name="radio-group" id="ews">
+      <label for="ews"><abbr title="Economically Weaker Section">EWS</abbr></label>
+      <!--Radio Button for SC/ST-->
+      <input type="radio" name="radio-group" id="scst">
+      <label for="scst"><abbr title="Scheduled Castes/Scheduled Tribes">SC/ST</abbr></label>
+      <hr>
+
+      <label><strong>Interested Subjects:</strong></label><br><br>
+      <!--Checkbox for Geography-->
+      <style>
+        .checkbox-container {
+          margin-right: 20px;
+        }
+      </style>
+      <!--Checkbox for Geography-->
+      <label for="geography">Geography</label>
+      <input class="checkbox-container" type="checkbox" value="0" id="geography">
+      <!--Checkbox for History-->
+      <label for="history">History</label>
+      <input class="checkbox-container" type="checkbox" value="0" id="history">
+      <!--Checkbox for Mathematics-->
+      <label for="maths">Mathematics</label>
+      <input class="checkbox-container" type="checkbox" value="0" id="maths">
+      <!--Checkbox for Computer Science-->
+      <label for="computer">Computer Science</label>
+      <input class="checkbox-container" type="checkbox" value="0" id="computer">
+      <!--Checkbox for Philosophy-->
+      <label for="computer">Philosophy</label>
+      <input class="checkbox-container" type="checkbox" value="0" id="computer">
+      <!--Checkbox for Literature-->
+      <label for="computer">Literature</label>
+      <input class="checkbox-container" type="checkbox" value="0" id="computer">
+      <hr>
+      <textarea>Write something about yourself</textarea>
+      <hr>
+      <input id="submit" type="submit">
+    </form>
+  </main>
+</body>
+</html>
